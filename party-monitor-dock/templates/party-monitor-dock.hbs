@@ -1,0 +1,13 @@
+<div id="party-monitor-dock" class="{{#if dockRight}}dock-ui-right{{/if}}">
+    <div class="party-monitor-buttons">
+        <i id="party-monitor-toggle" data-tooltip-direction="UP" data-tooltip="party-monitor-dock.app.buttons.toggle-dock" class="fas fa-bars"></i>
+        <i id="party-monitor-toggle-controls" data-tooltip-direction="UP" data-tooltip="party-monitor-dock.app.buttons.toggle-nav" class="fas fa-rectangles-mixed"></i>
+    </div>
+    {{#if cornerImage}}<img class="corner top" src="{{cornerImage}}">{{/if}}
+    <div id="party-container"></div>
+    {{#if cornerImage}}<img class="corner bot" src="{{cornerImage}}">{{/if}}
+    <div class="party-monitor-buttons bottom">
+        <i id="party-monitor-reduce" data-tooltip-direction="UP" data-tooltip="party-monitor-dock.app.buttons.reduce" class="fas fa-minus"></i>
+        <i id="party-monitor-enlarge" data-tooltip-direction="UP" data-tooltip="party-monitor-dock.app.buttons.enlarge" class="fas fa-plus"></i>
+    </div>
+</div>

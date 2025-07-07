@@ -1,0 +1,319 @@
+:root {
+  --pmd-portrait-width: 80px;
+  --pmd-aspect-ratio: 11/16;
+  --pmd-align: center;
+}
+
+#ui-right:has(#party-monitor-dock) {
+  display: flex;
+}
+
+/*#controls{
+    overflow: visible;
+}*/
+#party-monitor-dock {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  justify-content: var(--pmd-align);
+  align-items: flex-start;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+  /*max-width: calc(var(--combatant-portrait-size) * 1.25);
+  overflow: visible;*/
+}
+#party-monitor-dock.dock-ui-right {
+  align-items: flex-end;
+}
+#party-monitor-dock.dock-ui-right #party-container .party-member-actors .party-member-wrapper.character {
+  border-top-left-radius: var(--combatant-portrait-border-radius);
+  border-bottom-left-radius: var(--combatant-portrait-border-radius);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#party-monitor-dock.dock-ui-right .corner {
+  transform: scale(-1, 1);
+}
+#party-monitor-dock.dock-ui-right .corner.bot {
+  transform: scale(-1, -1);
+}
+#party-monitor-dock.dock-ui-right .party-member-actors {
+  flex-direction: row-reverse;
+}
+#party-monitor-dock.dock-ui-right #party-container {
+  align-items: flex-end;
+}
+#party-monitor-dock.dock-ui-right .border-background {
+  transform: scale(-1, 1);
+}
+#party-monitor-dock.dock-ui-right #party-monitor-toggle-controls {
+  display: none;
+}
+#party-monitor-dock.dock-ui-right.party-dock-hidden.party-dock-hidden.party-dock-hidden {
+  justify-content: center;
+}
+#party-monitor-dock.hide-in-combat {
+  display: none;
+}
+#party-monitor-dock .corner {
+  width: calc(var(--pmd-portrait-width) * 0.7);
+  border: none;
+  pointer-events: none;
+  border-radius: 0;
+  filter: drop-shadow(2px 4px 6px black);
+}
+#party-monitor-dock .corner.bot {
+  transform: scale(1, -1);
+}
+#party-monitor-dock.party-dock-hidden .corner {
+  display: none;
+}
+#party-monitor-dock.party-dock-hidden .party-monitor-buttons.bottom {
+  display: none;
+}
+#party-monitor-dock.party-dock-hidden.nav-visible {
+  justify-content: flex-start;
+  align-items: center;
+}
+#party-monitor-dock.party-dock-hidden.nav-visible .party-monitor-buttons {
+  margin: 0;
+  padding: 0;
+}
+#party-monitor-dock.party-dock-hidden #party-container {
+  display: none;
+}
+#party-monitor-dock.party-dock-hidden #party-monitor-toggle-controls {
+  display: none;
+}
+#party-monitor-dock.party-dock-hidden .party-monitor-buttons {
+  opacity: 0.5;
+}
+#party-monitor-dock:hover .party-monitor-buttons {
+  opacity: 1;
+}
+#party-monitor-dock .party-monitor-buttons {
+  pointer-events: all;
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0;
+  padding: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+#party-monitor-dock .party-monitor-buttons.link-button {
+  width: 0;
+  overflow: visible;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  translate: 0 calc(-1 * (var(--pmd-portrait-width) * var(--combatant-portrait-aspect) * 0.6 * 0.5 - 1rem));
+}
+#party-monitor-dock .party-monitor-buttons i {
+  color: var(--color-text-light-3);
+  padding: 0.5rem;
+  text-shadow: 0 0 5px var(--color-text-dark-1);
+  border: 2px inset var(--carousel-tooltip-color);
+  border-radius: 50%;
+  background: var(--carousel-tooltip-bg-color);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.873), inset 0px 0px 10px 0px rgba(0, 0, 0, 0.873);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#party-monitor-dock .party-monitor-buttons i:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+#party-monitor-dock #party-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.1rem;
+  position: relative;
+  max-height: 70%;
+  overflow-y: auto;
+}
+#party-monitor-dock #party-container .border-background {
+  border: none;
+  position: absolute;
+  height: 100%;
+  width: calc(var(--pmd-portrait-width) * 0.7);
+  background-size: contain;
+  background-repeat: repeat-y;
+  filter: drop-shadow(2px 4px 6px black);
+  z-index: -1;
+}
+#party-monitor-dock #party-container .party-member-actors {
+  pointer-events: all;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.1rem;
+}
+#party-monitor-dock #party-container .party-member-actors .party-member-wrapper {
+  border-radius: var(--combatant-portrait-border-radius);
+  overflow: hidden;
+}
+#party-monitor-dock #party-container .party-member-actors .party-member-wrapper.character {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+#party-monitor-dock #party-container .party-member-actors .party-member {
+  width: calc(var(--pmd-portrait-width));
+  height: calc(var(--pmd-portrait-width) * var(--combatant-portrait-aspect));
+  background-size: cover;
+  background-position: center;
+  border: 1px solid black;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+#party-monitor-dock #party-container .party-member-actors .party-member:hover {
+  filter: brightness(1.2);
+}
+#party-monitor-dock #party-container .party-member-actors .party-member.companion {
+  width: calc(var(--pmd-portrait-width) * 0.6);
+  height: calc(var(--pmd-portrait-width) * var(--combatant-portrait-aspect) * 0.6);
+}
+#party-monitor-dock #party-container .party-member-actors .party-member .portrait-bar {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  opacity: 0.5;
+  pointer-events: none;
+}
+#party-monitor-dock #party-container .party-member-actors .party-member .hand-raised {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  pointer-events: none;
+}
+#party-monitor-dock #party-container .party-member-actors .party-member .hand-raised i {
+  font-size: calc(0.65 * var(--pmd-portrait-width));
+  color: var(--color-level-warning);
+  text-shadow: 0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black, 0 0 10px black;
+  filter: brightness(2.5);
+}
+#party-monitor-dock #party-container .party-member-actors .party-member .hand-raised span {
+  --hand-raise-order-size: 1rem;
+  position: absolute;
+  font-size: var(--hand-raise-order-size);
+  width: var(--hand-raise-order-size);
+  height: var(--hand-raise-order-size);
+  background: var(--color-level-warning-bg);
+  box-shadow: 0 0 5px var(--color-level-warning);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 5%;
+  filter: brightness(1.5);
+}
+#party-monitor-dock #party-container .party-member-actors .party-member .overlay-ui-container {
+  position: relative;
+}
+#party-monitor-dock #party-container .party-member-actors .party-member .effects-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.1rem;
+  pointer-events: none;
+  list-style: none;
+  padding: calc(var(--pmd-portrait-width) * 0.05);
+  margin: 0;
+  margin-left: auto;
+}
+#party-monitor-dock #party-container .party-member-actors .party-member .effects-container li {
+  width: calc(var(--pmd-portrait-width) * 0.2);
+  height: calc(var(--pmd-portrait-width) * 0.2);
+  background-size: cover;
+  background-position: center;
+  pointer-events: all;
+}
+#party-monitor-dock #party-container .party-member-actors .party-member .bottom-ui-container {
+  position: absolute;
+  bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: var(--color-text-light-5);
+  pointer-events: none;
+}
+#party-monitor-dock #party-container .party-member-actors .party-member .bottom-ui-container .tracked-attribute-text-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-shadow: 0px 0px 3px black, 0px 0px 3px black;
+  font-size: calc(var(--combatant-portrait-size) * 0.15);
+  font-family: monospace;
+}
+#party-monitor-dock #party-container .party-member-actors .party-member .bottom-ui-container .tracked-attribute-text-container .tracked-attribute-text-value {
+  color: var(--attribute-bar-primary-color);
+}
+#party-monitor-dock #party-container .party-member-actors .party-member .bottom-ui-container .tracked-attribute-text-container .tracked-attribute-text-value.secondary-attribute {
+  color: var(--attribute-bar-primary-color2);
+}
+#party-monitor-dock #party-container .party-member-actors .party-member .overlay-ui-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  left: 0px;
+  overflow: hidden;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-start;
+}
+#party-monitor-dock #party-container .party-member-actors .party-member .overlay-ui-container .tracked-attribute-bar-max {
+  height: 100%;
+  width: 5%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.838);
+}
+#party-monitor-dock #party-container .party-member-actors .party-member .overlay-ui-container .tracked-attribute-bar-current {
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  position: absolute;
+  box-shadow: inset 0 0 2px black;
+  border-top: 0.1px solid rgba(255, 255, 255, 0.7098039216);
+  background: linear-gradient(180deg, var(--attribute-bar-primary-color) 0%, var(--attribute-bar-secondary-color) 100%);
+}
+#party-monitor-dock #party-container .party-member-actors .party-member .overlay-ui-container .tracked-attribute-bar-current.secondary-attribute {
+  background: linear-gradient(180deg, var(--attribute-bar-primary-color2) 0%, var(--attribute-bar-secondary-color2) 100%);
+}
+#party-monitor-dock #party-container .party-member-actors .party-member #context-menu {
+  bottom: 0;
+  top: unset;
+  min-width: 100%;
+  color: var(--color-text-light-3);
+  text-shadow: 0 0 5px var(--color-text-dark-1);
+  border: 2px inset var(--carousel-tooltip-color);
+  border-radius: 5px;
+  background: var(--carousel-tooltip-bg-color);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.873), inset 0px 0px 10px 0px rgba(0, 0, 0, 0.873);
+}
+#party-monitor-dock #party-container .party-member-actors .party-member #context-menu li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#party-monitor-dock #party-container .party-member-actors .party-member #context-menu li:hover {
+  filter: brightness(1.2);
+  text-shadow: 0 0 5px var(--color-text-dark-1);
+  cursor: pointer;
+}
+
+#controls:has(#party-monitor-dock).party-dock-hidden {
+  padding-left: 0;
+}
+#controls:has(#party-monitor-dock).party-dock-hidden ol.control-tools {
+  display: none !important;
+}/*# sourceMappingURL=module.css.map */

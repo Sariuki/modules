@@ -1,0 +1,53 @@
+<div class="party-member" draggable="true" data-actor-id="{{id}}" style="background-image: url('{{img}}');{{#if defeated}}filter: grayscale(1);{{/if}}">
+
+    {{#if hasPortraitResource}}
+    <div class="portrait-bar" style="height: calc( 100% - {{portraitResource.percentage}}% );"></div>
+    {{/if}}
+
+    {{#if handRaised}}<div class="hand-raised">
+        <i class="fa-duotone fa-hand fa-bounce"></i>
+        {{#if handRaisedOrder}}<span>{{handRaisedOrder}}</span>{{/if}}
+    </div>{{/if}}
+
+
+
+    <div class="overlay-ui-container">
+    {{#if resource.max}}
+        <div class="tracked-attribute-bar-max" style="order: {{barsOrder.bar1}};margin-left: {{barsOrder.bar1ML}};{{#unless showBars}}display: none;{{/unless}}" >
+        <div class="tracked-attribute-bar-current" style="height: {{resource.percentage}}%;"></div>
+        </div>
+    {{/if}}
+    {{#if resource2.max}}
+        <div class="tracked-attribute-bar-max" style="order: {{barsOrder.bar2}};margin-left: {{barsOrder.bar2ML}};{{#unless showBars}}display: none;{{/unless}}">
+        <div class="tracked-attribute-bar-current secondary-attribute" style="height: {{resource2.percentage}}%;"></div>
+        </div>
+    {{/if}}
+        <ul class="effects-container">
+        {{#each effects as |effect|}}
+            {{#if effect.isTemporary}}
+            {{#if effect.active}}
+            <li class="portrait-effect" data-uuid="{{effect.uuid}}" style="background-image: url('{{effect.img}}');"></li>
+            {{/if}}
+            {{/if}}
+        {{/each}}
+    </ul>
+    </div>
+    <div class="bottom-ui-container">
+        <div class="tracked-attribute-text-container" {{#unless showText}}style="display: none;"{{/unless}}>
+            <i class="tracked-attribute-text-value">{{resource.value}}</i>
+            {{#if resource.max}}
+            <i>/</i>
+            <i>{{resource.max}}</i>
+            {{/if}}
+        </div>
+
+        <div class="tracked-attribute-text-container" {{#unless showText}}style="display: none;"{{/unless}}>
+            <i class="tracked-attribute-text-value secondary-attribute">{{resource2.value}}</i>
+            {{#if resource2.max}}
+            <i>/</i>
+            <i>{{resource2.max}}</i>
+            {{/if}}
+        </div>
+
+    </div>
+</div>

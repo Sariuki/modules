@@ -1,0 +1,68 @@
+{
+  "title": "Paper Doll",
+  "description": "A system agnostic Equipment Management UI. Create and manage your equipment, add/remove items with an RPG like UI!",
+  "id": "fvtt-paper-doll-ui",
+  "version": "1.1.5",
+  "authors": [
+    {
+      "name": "theripper93",
+      "email": "tsplab@gmail.com",
+      "url": "https://www.patreon.com/theripper93"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    },
+    {
+      "lang": "ja",
+      "name": "日本語",
+      "path": "languages/ja.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "languages/de.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "languages/fr.json"
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "languages/es.json"
+    },
+    {
+      "lang": "pt-br",
+      "name": "Português (Brasil)",
+      "path": "languages/pt-br.json"
+    },
+    {
+      "lang": "it",
+      "name": "Italiano",
+      "path": "languages/it.json"
+    }
+  ],
+  "scripts": [],
+  "esmodules": [
+    "index.js"
+  ],
+  "styles": [
+    "styles/module.css"
+  ],
+  "packs": [],
+  "url": "",
+  "manifest": "https://r2.foundryvtt.com/packages-public/fvtt-paper-doll-ui/module.json",
+  "relationships": {
+    "requires": []
+  },
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
+  "protected": true
+}

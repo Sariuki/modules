@@ -1,0 +1,97 @@
+{
+    "fvtt-paper-doll-ui": {
+        "app": {
+            "actor-config": {
+                "img": {
+                    "label": "Bild",
+                    "placeholder": "Verwenden Sie das Schauspielerbild"
+                },
+                "objectFit": {
+                    "contain": "Enthalten",
+                    "cover": "Abdeckung",
+                    "label": "Bildanpassung"
+                },
+                "title": "Akteurkonfiguration",
+                "autoOpen": {
+                    "false": "Niemals",
+                    "label": "Automatisches Öffnen",
+                    "true": "Stets",
+                    "useDefault": "Verwende den Standard"
+                },
+                "playerOwnedOnly": {
+                    "hint": "Aktivieren Sie Paper Doll nur für spielereigene Schauspieler.",
+                    "label": "Nur im Besitz von Spielern"
+                }
+            },
+            "paper-doll-global-config": {
+                "EQUIPPED_PATH": {
+                    "label": "Ausgestatteter Pfad"
+                },
+                "HUE_ROTATE": {
+                    "label": "Farbton"
+                },
+                "MAIN_COLOR": {
+                    "label": "Farbe"
+                },
+                "how": {
+                    "add": "Fügen Sie einen neuen Slot hinzu, indem Sie auf die Schaltfläche „Hinzufügen“ klicken.",
+                    "image": "Wählen Sie ein Bild für den Slot aus, indem Sie mit der linken Maustaste darauf klicken.",
+                    "remove": "Entfernen Sie einen Slot, indem Sie mit der rechten Maustaste darauf klicken."
+                },
+                "title": "Globale Konfiguration von Paper Doll",
+                "filter": {
+                    "hint": "Ein Skript, das zum Erstellen eines Fensters mit Gegenständen verwendet wird, mit denen dieser Slot ausgerüstet werden kann. \n„Artikel“ bezieht sich auf den geprüften Artikel. \nBeispiel: return item.type === 'weapon';",
+                    "label": "Benutzerdefinierte Filter"
+                },
+                "img": "Symbol",
+                "simpleFilter": {
+                    "hint": "Filtern Sie nur Elemente, die diesen Typ haben.",
+                    "label": "Basisfilter"
+                }
+            },
+            "paper-doll": {
+                "config": "Aufbau",
+                "title": "Papierpuppe",
+                "disallowed": "Dieser Gegenstand darf in diesem Slot nicht ausgerüstet werden."
+            }
+        },
+        "hotkeys": {
+            "togglePaperDoll": {
+                "name": "Papierpuppe umschalten"
+            }
+        },
+        "settings": {
+            "allowNonOwned": {
+                "hint": "Ermöglichen Sie das Hinzufügen nicht im Besitz befindlicher Elemente (z. B. Elemente aus der Seitenleiste oder dem Kompendium) zur Papierpuppe. \nDiese Einstellung ist für benutzerdefinierte Systeme gedacht, die kein Inventarsystem haben, und sollte generell weggelassen werden.",
+                "name": "Nicht im Besitz befindliche Artikel zulassen"
+            },
+            "autoOpen": {
+                "hint": "Öffnen Sie die Papierpuppe automatisch, wenn ein Schauspielerblatt geöffnet wird.",
+                "name": "Automatisches Öffnen"
+            },
+            "globalConfigMenu": {
+                "hint": "Passen Sie leere Bilder und die Anzahl der Slots für jeden Typ an.",
+                "label": "Papierpuppe konfigurieren",
+                "name": "Globale Einstellungen für Paper Doll"
+            },
+            "hideActorHeaderText": {
+                "hint": "Blenden Sie den Text in der Kopfzeilenschaltfläche des Schauspielers aus.",
+                "name": "Text der Schaltfläche „Darsteller-Kopfzeile“ ausblenden"
+            },
+            "paperDollPosition": {
+                "choices": {
+                    "center": "Center",
+                    "left": "Links",
+                    "right": "Rechts"
+                },
+                "hint": "Position der Papierpuppe im geöffneten Zustand. \nBeachten Sie, dass die Papierpuppe in der Mitte platziert wird, wenn der Platz links oder rechts nicht ausreicht.",
+                "label": "Position",
+                "name": "Papierpuppenposition"
+            },
+            "playerOwnedOnly": {
+                "hint": "Aktivieren Sie Paper Doll nur für spielereigene Schauspieler.",
+                "name": "Nur im Besitz von Spielern"
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+<div class="paper-doll-content">
+    <div class="paper-doll-background">
+        <img class="paper-doll-portrait" src="{{portraitImage}}" alt="">
+        <div class="paper-doll-gradient"></div>
+        <div class="paper-doll-gradient-2"></div>
+    </div>
+    <div class="paper-doll-foreground">
+        <div class="paper-doll-top">
+            <div class="paper-doll-left paper-doll-col">
+                {{#each left as |slots|}}
+                {{#each slots as |slot|}}
+                <div {{#unless slot.empty}}draggable="true" {{/unless}} data-tooltip="{{slot.item.name}}"
+                    class="paper-doll-slot {{slot.empty}}" data-index="{{slot.slotIndex}}" data-id="{{slot.slotId}}"
+                    style="{{#if slot.itemColor}}box-shadow: inset 0 0 10px {{slot.itemColor}}; border-color: {{slot.itemColor}};{{/if}} background-image: url('{{#if slot.item.img}}{{slot.item.img}}{{else}}{{slot.image}}{{/if}}');">
+                </div>
+                {{/each}}
+                {{/each}}
+
+            </div>
+
+            <div class="paper-doll-center {{#if isConfig}}config{{/if}}">
+                {{#if isConfig}}
+                <ul>
+                    <li>{{localize "fvtt-paper-doll-ui.app.paper-doll-global-config.how.add"}}</li>
+                    <li>{{localize "fvtt-paper-doll-ui.app.paper-doll-global-config.how.remove"}}</li>
+                    <li>{{localize "fvtt-paper-doll-ui.app.paper-doll-global-config.how.image"}}</li>
+                </ul>
+                <form action="">
+                <div class="form-group">
+                    <label for="">{{localize "fvtt-paper-doll-ui.app.paper-doll-global-config.MAIN_COLOR.label"}}</label>
+                    {{colorPicker name="MAIN_COLOR" value=MAIN_COLOR default="#000000"}}
+                </div>
+
+                <div class="form-group">
+                    <label for="">{{localize "fvtt-paper-doll-ui.app.paper-doll-global-config.HUE_ROTATE.label"}}</label>
+                    {{rangePicker name="HUE_ROTATE" value=HUE_ROTATE min=0 max=360 step=1}}
+                </div>
+
+                <div class="form-group">
+                    <label for="">{{localize "fvtt-paper-doll-ui.app.paper-doll-global-config.EQUIPPED_PATH.label"}}</label>
+                    <input type="text" name="EQUIPPED_PATH" value="{{EQUIPPED_PATH}}">
+                </div>
+                </form>
+                {{else}}
+                <div class="paper-doll-controls">
+                    <i data-action="configure" class="paper-doll-control fas fa-cog"></i>
+                    <i data-action="close" class="paper-doll-control fas fa-times"></i>
+                </div>
+                {{/if}}
+            </div>
+            <div class="paper-doll-right paper-doll-col">
+                {{#each right as |slots|}}
+                {{#each slots as |slot|}}
+                <div {{#unless slot.empty}}draggable="true" {{/unless}} data-tooltip="{{slot.item.name}}"
+                    class="paper-doll-slot {{slot.empty}}" data-index="{{slot.slotIndex}}" data-id="{{slot.slotId}}"
+                    style="{{#if slot.itemColor}}box-shadow: inset 0 0 10px {{slot.itemColor}}; border-color: {{slot.itemColor}};{{/if}} background-image: url('{{#if slot.item.img}}{{slot.item.img}}{{else}}{{slot.image}}{{/if}}');">
+                </div>
+
+                {{/each}}
+                {{/each}}
+            </div>
+        </div>
+        <div class="paper-doll-bottom">
+            <div class="paper-doll-bottom-left">
+                <div class="paper-doll-wrist">
+                    {{#each bottomLeftWrist as |slots|}}
+                    {{#each slots as |slot|}}
+                    <div {{#unless slot.empty}}draggable="true" {{/unless}} data-tooltip="{{slot.item.name}}"
+                        class="paper-doll-slot {{slot.empty}}" data-index="{{slot.slotIndex}}" data-id="{{slot.slotId}}"
+                        style="{{#if slot.itemColor}}box-shadow: inset 0 0 10px {{slot.itemColor}}; border-color: {{slot.itemColor}};{{/if}} background-image: url('{{#if slot.item.img}}{{slot.item.img}}{{else}}{{slot.image}}{{/if}}');">
+                    </div>
+                    {{/each}}
+                    {{/each}}
+                </div>
+                <div class="paper-doll-main">
+                    {{#each bottomLeftMain as |slots|}}
+                    {{#each slots as |slot|}}
+                    <div {{#unless slot.empty}}draggable="true" {{/unless}} data-tooltip="{{slot.item.name}}"
+                        class="paper-doll-slot {{slot.empty}}" data-index="{{slot.slotIndex}}" data-id="{{slot.slotId}}"
+                        style="{{#if slot.itemColor}}box-shadow: inset 0 0 10px {{slot.itemColor}}; border-color: {{slot.itemColor}};{{/if}} background-image: url('{{#if slot.item.img}}{{slot.item.img}}{{else}}{{slot.image}}{{/if}}');">
+                    </div>
+                    {{/each}}
+                    {{/each}}
+                </div>
+            </div>
+            <div class="paper-doll-bottom-right">
+                <div class="paper-doll-wrist">
+                    {{#each bottomRightWrist as |slots|}}
+                    {{#each slots as |slot|}}
+                    <div {{#unless slot.empty}}draggable="true" {{/unless}} data-tooltip="{{slot.item.name}}"
+                        class="paper-doll-slot {{slot.empty}}" data-index="{{slot.slotIndex}}" data-id="{{slot.slotId}}"
+                        style="{{#if slot.itemColor}}box-shadow: inset 0 0 10px {{slot.itemColor}}; border-color: {{slot.itemColor}};{{/if}} background-image: url('{{#if slot.item.img}}{{slot.item.img}}{{else}}{{slot.image}}{{/if}}');">
+                    </div>
+                    {{/each}}
+                    {{/each}}
+                </div>
+                <div class="paper-doll-main">
+                    {{#each bottomRightMain as |slots|}}
+                    {{#each slots as |slot|}}
+                    <div {{#unless slot.empty}}draggable="true" {{/unless}} data-tooltip="{{slot.item.name}}"
+                        class="paper-doll-slot {{slot.empty}}" data-index="{{slot.slotIndex}}" data-id="{{slot.slotId}}"
+                        style="{{#if slot.itemColor}}box-shadow: inset 0 0 10px {{slot.itemColor}}; border-color: {{slot.itemColor}};{{/if}} background-image: url('{{#if slot.item.img}}{{slot.item.img}}{{else}}{{slot.image}}{{/if}}');">
+                    </div>
+                    {{/each}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,69 @@
+{
+    "party-monitor-dock": {
+        "app": {
+            "buttons": {
+                "context": {
+                    "epicRoll": "Requerido \nRolar",
+                    "follow": "Seguir",
+                    "mount": "Montar",
+                    "raise-hand": "Levante a mão"
+                },
+                "enlarge": "Aumentar tamanho",
+                "reduce": "Diminuir tamanho",
+                "start-follow": "Comece a seguir",
+                "stop-follow": "Pare de seguir",
+                "toggle-dock": "Alternar doca",
+                "toggle-nav": "Alternar botões de navegação"
+            }
+        },
+        "notifications": {
+            "dismounted": "desmontou",
+            "follow": "agora seguindo",
+            "mounted": "montou",
+            "unfollow": "não seguindo mais"
+        },
+        "settings": {
+            "cornerImage": {
+                "hint": "A imagem a ser usada nos cantos do dock Deixe em branco para desativar.",
+                "name": "Imagem de canto"
+            },
+            "dockAlignment": {
+                "choices": {
+                    "center": "Centro",
+                    "flex-end": "Fundo",
+                    "flex-start": "Principal"
+                },
+                "hint": "O alinhamento do HUD na tela",
+                "name": "Alinhamento do HUD"
+            },
+            "edgeImage": {
+                "hint": "A imagem a ser usada para preencher o espaço entre os cantos do encaixe. \nDeixe em branco para desabilitar.",
+                "name": "Imagem de borda"
+            },
+            "onlyConnected": {
+                "hint": "Mostrar apenas jogadores que estão conectados ao servidor",
+                "name": "Mostrar apenas jogadores conectados"
+            },
+            "portraitSize": {
+                "hint": "O tamanho dos retratos no banco dos réus",
+                "name": "Tamanho do retrato"
+            },
+            "hideInCombat": {
+                "hint": "Ocultar o HUD quando um combate estiver ativo",
+                "name": "Esconda-se no combate"
+            },
+            "hideCompanions": {
+                "hint": "Ocultar companheiros da lista de membros do grupo",
+                "name": "Ocultar companheiros"
+            },
+            "dockSide": {
+                "choices": {
+                    "left": "Esquerda (encaixar nos controles de cena)",
+                    "right": "Direita (encaixar na barra lateral)"
+                },
+                "hint": "A lateral da tela para colocar o dock",
+                "name": "Lado da doca"
+            }
+        }
+    }
+}

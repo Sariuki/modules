@@ -1,0 +1,426 @@
+$color_1: var(--color-text-light-highlight);
+$color_2: var(--color-text-dark-2);
+$background-color_1: var(--color-border-dark-2);
+$background-color_2: rgb(118, 118, 118);
+$background-color_3: rgba(255, 255, 255, 0.274);
+
+/*Tooltip*/
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+/*Sidebar mode*/
+:root {
+	--filepickerplus-width: 810px;
+}
+
+.filepicker-plus-dimensions{
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	padding: 0.2rem 0.5rem;
+	background: var(--color-border-dark-2);
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	color: var(--color-text-light-highlight);
+}
+
+.filepicker {
+	width: var(--filepickerplus-width) !important;
+	max-height: 85vh;
+
+	.standard-form .form-group > label{
+		color: var(--color-text-light-highlight);
+	}
+
+	.directory.files-list {
+		width: 100%;
+	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+		max-height: 100%;
+	}
+
+	.folders-list.expanded {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.current-dir {
+		button[data-action="mkdir"] {
+			margin-left: 0.3rem;
+		}
+	}
+
+	.dir {
+		position: relative;
+		white-space: nowrap;
+	}
+
+	.directory {
+
+		overflow: auto;
+		flex: 1;
+
+		> li {
+			&:last-child {
+				border-bottom: 1px solid #444;
+			}
+		}
+	}
+
+	.folders-list {
+		width: 30%;
+		max-width: 50%;
+		min-width: max-content;
+	}
+
+	.tiles-list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+		align-items: center;
+		justify-content: center;
+		justify-items: center;
+
+		li {
+			width: 90px;
+			height: 90px;
+			min-width: 90px;
+			min-height: 90px;
+			max-width: 90px;
+			max-height: 90px;
+
+			img {
+				height: 100%;
+			}
+		}
+
+		.file {
+			margin: 5px;
+			border: none;
+			box-shadow: 1px 1px 3px black;
+			padding: 5px;
+		}
+	}
+
+	.tile-size {
+		padding-top: 0.5rem;
+	}
+
+	.display-modes {
+		a {
+			background: none;
+		}
+	}
+
+	.favorites {
+		label {
+			span {
+				display: none;
+			}
+
+			max-width: 1rem;
+		}
+	}
+
+	.units {
+		display: none;
+	}
+
+	label[for="displayMode"] {
+		display: none;
+	}
+
+	label[for="filter"] {
+		display: none;
+	}
+
+	.filepicker-body {
+		overflow: auto;
+		display: flex;
+		flex-grow: 1;
+		flex-direction: row;
+
+		ol {
+			max-height: unset !important;
+		}
+	}
+
+	.filter-dir {
+		display: none;
+	}
+}
+
+.filepicker-body.list {
+	overflow: hidden !important;
+}
+
+.filepicker.fp-theme {
+	.window-content {
+		color: $color_1;
+		background: var(--color-border-dark-2);
+	}
+
+	.bucket {
+		color: $color_1;
+	}
+
+	.tabs {
+		.item.active {
+			text-shadow: 0 0 5px var(--color-text-light-highlight);
+		}
+	}
+
+	input[type="text"] {
+		color: $color_1;
+	}
+
+	button {
+		color: $color_1;
+
+		&:hover {
+			background-color: $background-color_3;
+			box-shadow: none;
+		}
+	}
+
+	.filename {
+		&:hover {
+			text-shadow: none;
+		}
+	}
+
+	.file {
+		&:hover {
+			text-shadow: none;
+			background-color: $background-color_3;
+		}
+	}
+
+	a {
+		&:hover {
+			text-shadow: none;
+		}
+	}
+
+	.display-mode {
+		&:hover {
+			background-color: $background-color_3;
+			box-shadow: none;
+		}
+	}
+
+	.display-modes {
+		a.active {
+			background: rgba(255, 255, 255, 0.274);
+			text-shadow: none;
+		}
+	}
+
+	.directory {
+		.dir {
+			&:hover {
+				text-shadow: none;
+				background-color: $background-color_3;
+			}
+		}
+	}
+
+	input[name="filter"] {
+		max-width: 30%;
+		height: 32px;
+		margin: 0 5px 0 0;
+	}
+
+	input {
+		color: $color_1;
+	}
+
+	.path {
+		color: $color_2;
+	}
+}
+
+.filepickerplussidebar.filepicker {
+	input[name="filter"] {
+		max-width: 100%;
+	}
+}
+
+.filepicker-body {
+	> .filepicker-body {
+		display: flex;
+	}
+
+	&:first-child {
+		flex: 1;
+		overflow-y: auto;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.tile-size {
+	.hint {
+		display: none;
+	}
+}
+
+.filepicker-plus-tooltip {
+	pointer-events: none;
+	position: absolute;
+	overflow: hidden;
+	top: 10px;
+	left: 10px;
+	z-index: 9999;
+	background: var(--color-border-dark-2);
+	border-radius: 5px;
+	padding: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	max-width: 500px;
+	aspect-ratio: auto;
+	margin: 0;
+	border: 1px solid #000;
+	animation: fadein 0.5s;
+	display: flex;
+
+	img {
+		min-width: 200px;
+	}
+
+	.filepicker-plus-file-icon {
+		border: none;
+		max-width: 100%;
+	}
+}
+
+.filepicker-plus-three {
+	width: 20vw;
+	height: 20vw;
+}
+
+.glb-preview {
+	width: 100%;
+	height: 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	line-height: 10px;
+}
+
+#sidebar {
+	.app.window-app.filepicker {
+		left: unset !important;
+		top: unset !important;
+		width: 100% !important;
+		display: block;
+		position: relative;
+		margin: -5px;
+		border: none;
+	}
+
+	.filepicker {
+		.window-header {
+			display: none;
+		}
+
+		.directory {
+			transition: all 0.3s ease-in-out;
+			transition-delay: 0s;
+		}
+
+		.filepicker-body:not(:has(.file)){
+			.directory.folders-list{
+				width: 100%;
+				min-width: 100%;
+			}
+		}
+
+		.directory.folders-list {
+			width: 1.5rem;
+			max-width: 1.5rem;
+			min-width: 1.5rem;
+			min-height: calc(100% - 1rem);
+
+			&:hover {
+				width: 100%;
+				min-width: 100%;
+				transition-delay: 0.3s;
+			}
+		}
+
+		.directory.folders-list.folders-list.expanded {
+			width: 100%;
+			min-width: 100%;
+			transition-delay: 0.3s;
+		}
+
+		.selected-file {
+			display: none;
+		}
+
+		.button[type="submit"] {
+			display: none;
+		}
+
+		.tiles-list {
+			grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+
+			.file {
+				width: 72px;
+				height: 72px;
+				min-width: 72px;
+				min-height: 72px;
+				max-width: 72px;
+				max-height: 72px;
+
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+
+		.window-content {
+			height: calc(100% - 0.3rem);
+		}
+
+		.tile-size {
+			label {
+				max-width: 3rem;
+				margin-left: 0.3rem;
+			}
+
+			.form-fields {
+				&:not(.display-modes) {
+					max-width: 3rem;
+					margin-right: 0.3rem;
+				}
+			}
+		}
+
+		min-height: 98%;
+
+		.window-resizable-handle {
+			display: none;
+		}
+
+		.upload-file {
+			label {
+				display: none;
+			}
+		}
+	}
+
+	#sidebar-tabs {
+		--sidebar-tab-width: 22px;
+	}
+}

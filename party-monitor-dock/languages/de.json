@@ -1,0 +1,69 @@
+{
+    "party-monitor-dock": {
+        "app": {
+            "buttons": {
+                "context": {
+                    "epicRoll": "Anf. \nRollen",
+                    "follow": "Folgen",
+                    "mount": "Montieren",
+                    "raise-hand": "Hand heben"
+                },
+                "enlarge": "Größe erhöhen",
+                "reduce": "Größe verringern",
+                "start-follow": "Beginnen Sie mit dem Folgen",
+                "stop-follow": "Hör auf zu folgen",
+                "toggle-dock": "Dock umschalten",
+                "toggle-nav": "Navigationsschaltflächen umschalten"
+            }
+        },
+        "notifications": {
+            "dismounted": "ist abgestiegen",
+            "follow": "jetzt folgt",
+            "mounted": "ist montiert",
+            "unfollow": "folgt nicht mehr"
+        },
+        "settings": {
+            "cornerImage": {
+                "hint": "Das in den Ecken des Docks zu verwendende Bild. Zum Deaktivieren leer lassen.",
+                "name": "Eckbild"
+            },
+            "dockAlignment": {
+                "choices": {
+                    "center": "Center",
+                    "flex-end": "Unten",
+                    "flex-start": "Spitze"
+                },
+                "hint": "Die Ausrichtung des HUD auf dem Bildschirm",
+                "name": "HUD-Ausrichtung"
+            },
+            "edgeImage": {
+                "hint": "Das Bild, das zum Füllen des Raums zwischen den Ecken des Docks verwendet werden soll. \nZum Deaktivieren leer lassen.",
+                "name": "Kantenbild"
+            },
+            "onlyConnected": {
+                "hint": "Zeigt nur Spieler an, die mit dem Server verbunden sind",
+                "name": "Nur verbundene Spieler anzeigen"
+            },
+            "portraitSize": {
+                "hint": "Die Größe der Porträts im Dock",
+                "name": "Porträtgröße"
+            },
+            "hideInCombat": {
+                "hint": "Blenden Sie das HUD aus, wenn ein Kampf aktiv ist",
+                "name": "Verstecke dich im Kampf"
+            },
+            "hideCompanions": {
+                "hint": "Gefährten aus der Gruppenmitgliederliste ausblenden",
+                "name": "Gefährten ausblenden"
+            },
+            "dockSide": {
+                "choices": {
+                    "left": "Links (An Szenensteuerung andocken)",
+                    "right": "Rechts (an Seitenleiste andocken)"
+                },
+                "hint": "Die Seite des Bildschirms zum Platzieren des Docks",
+                "name": "Dockseite"
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "fvtt-paper-doll-ui": {
+        "app": {
+            "actor-config": {
+                "img": {
+                    "label": "Image",
+                    "placeholder": "Utiliser l'image de l'acteur"
+                },
+                "objectFit": {
+                    "contain": "Contenir",
+                    "cover": "Couverture",
+                    "label": "Ajustement de l'image"
+                },
+                "title": "Configuration de l'acteur",
+                "autoOpen": {
+                    "false": "Jamais",
+                    "label": "Ouverture automatique",
+                    "true": "Toujours",
+                    "useDefault": "L'utilisation par défaut"
+                },
+                "playerOwnedOnly": {
+                    "hint": "Activez Paper Doll uniquement pour les acteurs appartenant aux joueurs.",
+                    "label": "Propriété du joueur uniquement"
+                }
+            },
+            "paper-doll-global-config": {
+                "EQUIPPED_PATH": {
+                    "label": "Chemin équipé"
+                },
+                "HUE_ROTATE": {
+                    "label": "Teinte"
+                },
+                "MAIN_COLOR": {
+                    "label": "Couleur"
+                },
+                "how": {
+                    "add": "Ajoutez un nouvel emplacement en cliquant sur le bouton « Ajouter ».",
+                    "image": "Sélectionnez une image pour l'emplacement en cliquant dessus avec le bouton gauche.",
+                    "remove": "Supprimez un emplacement en faisant un clic droit dessus."
+                },
+                "title": "Configuration globale de la poupée de papier",
+                "filter": {
+                    "hint": "Un script utilisé pour créer une fenêtre avec des éléments pouvant être équipés sur cet emplacement. \n« élément » fait référence à l'élément en cours de vérification. \nExemple : return item.type === 'weapon';",
+                    "label": "Filtre personnalisé"
+                },
+                "img": "Icône",
+                "simpleFilter": {
+                    "hint": "Filtrez uniquement les éléments de ce type.",
+                    "label": "Filtre de base"
+                }
+            },
+            "paper-doll": {
+                "config": "Configuration",
+                "title": "Poupée de papier",
+                "disallowed": "Cet objet ne peut pas être équipé sur cet emplacement."
+            }
+        },
+        "hotkeys": {
+            "togglePaperDoll": {
+                "name": "Basculer la poupée en papier"
+            }
+        },
+        "settings": {
+            "allowNonOwned": {
+                "hint": "Autoriser l'ajout d'éléments n'appartenant pas à la poupée de papier (par exemple, les éléments de la barre latérale ou du recueil). \nCe paramètre est destiné aux systèmes personnalisés qui ne disposent pas de système d'inventaire et doit généralement être laissé de côté.",
+                "name": "Autoriser les objets n'appartenant pas"
+            },
+            "autoOpen": {
+                "hint": "Ouvrez automatiquement la poupée de papier lorsqu'une feuille d'acteur est ouverte.",
+                "name": "Ouverture automatique"
+            },
+            "globalConfigMenu": {
+                "hint": "Personnalisez les images vides et le nombre d'emplacements pour chaque type.",
+                "label": "Configurer la poupée de papier",
+                "name": "Paramètres globaux de Paper Doll"
+            },
+            "hideActorHeaderText": {
+                "hint": "Masquez le texte dans le bouton d'en-tête de l'acteur.",
+                "name": "Masquer le texte du bouton d’en-tête d’acteur"
+            },
+            "paperDollPosition": {
+                "choices": {
+                    "center": "Centre",
+                    "left": "Gauche",
+                    "right": "Droite"
+                },
+                "hint": "Position de la poupée de papier une fois ouverte. \nA noter que si l'espace n'est pas suffisant à gauche ou à droite, la poupée en papier sera placée au milieu.",
+                "label": "Position",
+                "name": "Position de la poupée de papier"
+            },
+            "playerOwnedOnly": {
+                "hint": "Activez Paper Doll uniquement pour les acteurs appartenant aux joueurs.",
+                "name": "Propriété du joueur uniquement"
+            }
+        }
+    }
+}

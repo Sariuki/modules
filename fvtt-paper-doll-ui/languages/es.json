@@ -1,0 +1,97 @@
+{
+    "fvtt-paper-doll-ui": {
+        "app": {
+            "actor-config": {
+                "img": {
+                    "label": "Imagen",
+                    "placeholder": "Usar imagen de actor"
+                },
+                "objectFit": {
+                    "contain": "Contener",
+                    "cover": "Cubrir",
+                    "label": "Ajuste de imagen"
+                },
+                "title": "Configuración de actores",
+                "autoOpen": {
+                    "false": "Nunca",
+                    "label": "Apertura automática",
+                    "true": "Siempre",
+                    "useDefault": "Uso por defecto"
+                },
+                "playerOwnedOnly": {
+                    "hint": "Habilite Paper Doll solo para actores propiedad del jugador.",
+                    "label": "Solo propiedad del jugador"
+                }
+            },
+            "paper-doll-global-config": {
+                "EQUIPPED_PATH": {
+                    "label": "Camino equipado"
+                },
+                "HUE_ROTATE": {
+                    "label": "Matiz"
+                },
+                "MAIN_COLOR": {
+                    "label": "Color"
+                },
+                "how": {
+                    "add": "Agregue una nueva ranura haciendo clic en el botón \"Agregar\".",
+                    "image": "Seleccione una imagen para la ranura haciendo clic izquierdo sobre ella.",
+                    "remove": "Elimina una ranura haciendo clic derecho sobre ella."
+                },
+                "title": "Configuración global de muñeca de papel",
+                "filter": {
+                    "hint": "Un script utilizado para crear una ventana con elementos que se pueden equipar en esta ranura. \n'artículo' se refiere al artículo que se está verificando. \nEjemplo: devolver item.type === 'arma';",
+                    "label": "Filtro personalizado"
+                },
+                "img": "Icono",
+                "simpleFilter": {
+                    "hint": "Filtre solo los artículos que tengan este tipo.",
+                    "label": "Filtro básico"
+                }
+            },
+            "paper-doll": {
+                "config": "Configuración",
+                "title": "Muñeca de papel",
+                "disallowed": "No se permite equipar este artículo en esta ranura."
+            }
+        },
+        "hotkeys": {
+            "togglePaperDoll": {
+                "name": "Alternar muñeca de papel"
+            }
+        },
+        "settings": {
+            "allowNonOwned": {
+                "hint": "Permita que se agreguen a la muñeca de papel artículos que no sean de su propiedad (p. ej., artículos de la barra lateral o del compendio). \nEsta configuración está destinada a sistemas personalizados que no tienen un sistema de inventario y, por lo general, deben omitirse.",
+                "name": "Permitir artículos que no son de propiedad"
+            },
+            "autoOpen": {
+                "hint": "Abre automáticamente la muñeca de papel cuando se abre una hoja de actor.",
+                "name": "Apertura automática"
+            },
+            "globalConfigMenu": {
+                "hint": "Personaliza imágenes vacías y el número de espacios para cada tipo.",
+                "label": "Configurar muñeca de papel",
+                "name": "Configuración global de muñeca de papel"
+            },
+            "hideActorHeaderText": {
+                "hint": "Oculta el texto en el botón del encabezado del actor.",
+                "name": "Ocultar texto del botón del encabezado del actor"
+            },
+            "paperDollPosition": {
+                "choices": {
+                    "center": "Centro",
+                    "left": "Izquierda",
+                    "right": "Bien"
+                },
+                "hint": "Posición del muñeco de papel al abrirlo. \nTenga en cuenta que si el espacio no es suficiente a la izquierda o a la derecha, la muñeca de papel se colocará en el medio.",
+                "label": "Posición",
+                "name": "Posición de la muñeca de papel"
+            },
+            "playerOwnedOnly": {
+                "hint": "Habilite Paper Doll solo para actores propiedad del jugador.",
+                "name": "Solo propiedad del jugador"
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+<form action="submit">
+
+    <div class="form-group">
+        <label for="">{{localize "fvtt-paper-doll-ui.app.actor-config.img.label"}}</label>
+        <input type="text" name="flags.fvtt-paper-doll-ui.img" placeholder="{{localize "fvtt-paper-doll-ui.app.actor-config.img.placeholder"}}" value="{{flags.fvtt-paper-doll-ui.img}}">
+        {{filePicker target="flags.fvtt-paper-doll-ui.img" type="image"}}
+    </div>
+
+    <div class="form-group">
+        <label for="">{{localize "fvtt-paper-doll-ui.app.actor-config.objectFit.label"}}</label>
+        <select name="flags.fvtt-paper-doll-ui.objectFit">
+            <option {{#if (eq flags.fvtt-paper-doll-ui.objectFit 'cover')}}selected{{/if}} value="cover">{{localize "fvtt-paper-doll-ui.app.actor-config.objectFit.cover"}}</option>
+            <option {{#if (eq flags.fvtt-paper-doll-ui.objectFit 'contain')}}selected{{/if}} value="contain">{{localize "fvtt-paper-doll-ui.app.actor-config.objectFit.contain"}}</option>
+        </select>
+    </div>
+
+        <div class="form-group">
+        <label for="">{{localize "fvtt-paper-doll-ui.app.actor-config.autoOpen.label"}}</label>
+        <select name="flags.fvtt-paper-doll-ui.autoOpen">
+            <option {{#if (eq flags.fvtt-paper-doll-ui.autoOpen 'useDefault')}}selected{{/if}} value="useDefault">{{localize "fvtt-paper-doll-ui.app.actor-config.autoOpen.useDefault"}}</option>
+            <option {{#if (eq flags.fvtt-paper-doll-ui.autoOpen 'true')}}selected{{/if}} value="true">{{localize "fvtt-paper-doll-ui.app.actor-config.autoOpen.true"}}</option>
+            <option {{#if (eq flags.fvtt-paper-doll-ui.autoOpen 'false')}}selected{{/if}} value="false">{{localize "fvtt-paper-doll-ui.app.actor-config.autoOpen.false"}}</option>
+        </select>
+    </div>
+
+
+    <footer>
+        <button type="submit">{{localize "SETTINGS.Save"}}</button>
+    </footer>
+
+</form>

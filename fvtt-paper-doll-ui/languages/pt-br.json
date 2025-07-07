@@ -1,0 +1,97 @@
+{
+    "fvtt-paper-doll-ui": {
+        "app": {
+            "actor-config": {
+                "img": {
+                    "label": "Imagem",
+                    "placeholder": "Usar imagem de ator"
+                },
+                "objectFit": {
+                    "contain": "Conter",
+                    "cover": "Cobrir",
+                    "label": "Ajuste de imagem"
+                },
+                "title": "Configuração do ator",
+                "autoOpen": {
+                    "false": "Nunca",
+                    "label": "Abertura automática",
+                    "true": "Sempre",
+                    "useDefault": "Use o padrão"
+                },
+                "playerOwnedOnly": {
+                    "hint": "Habilite Paper Doll apenas para atores pertencentes a jogadores.",
+                    "label": "Propriedade exclusiva do jogador"
+                }
+            },
+            "paper-doll-global-config": {
+                "EQUIPPED_PATH": {
+                    "label": "Caminho Equipado"
+                },
+                "HUE_ROTATE": {
+                    "label": "Matiz"
+                },
+                "MAIN_COLOR": {
+                    "label": "Cor"
+                },
+                "how": {
+                    "add": "Adicione um novo slot clicando no botão `Adicionar`.",
+                    "image": "Selecione uma imagem para o slot clicando com o botão esquerdo nela.",
+                    "remove": "Remova um slot clicando com o botão direito nele."
+                },
+                "title": "Configuração global da boneca de papel",
+                "filter": {
+                    "hint": "Um script usado para criar uma janela com itens que podem ser equipados neste slot. \n'item' refere-se ao item que está sendo verificado. \nExemplo: return item.type === 'arma';",
+                    "label": "Filtro customizado"
+                },
+                "img": "Ícone",
+                "simpleFilter": {
+                    "hint": "Filtre apenas os itens que possuem esse tipo.",
+                    "label": "Filtro Básico"
+                }
+            },
+            "paper-doll": {
+                "config": "Configuração",
+                "title": "Boneca de papel",
+                "disallowed": "Este item não pode ser equipado neste slot."
+            }
+        },
+        "hotkeys": {
+            "togglePaperDoll": {
+                "name": "Alternar boneca de papel"
+            }
+        },
+        "settings": {
+            "allowNonOwned": {
+                "hint": "Permitir que itens que não sejam de sua propriedade (por exemplo, itens da barra lateral ou do compêndio) sejam adicionados ao boneco de papel. \nEsta configuração destina-se a sistemas personalizados que não possuem um sistema de inventário e geralmente devem ser deixados desativados.",
+                "name": "Permitir itens que não são de sua propriedade"
+            },
+            "autoOpen": {
+                "hint": "Abra automaticamente a boneca de papel quando uma folha de ator for aberta.",
+                "name": "Abertura automática"
+            },
+            "globalConfigMenu": {
+                "hint": "Personalize imagens vazias e número de slots para cada tipo.",
+                "label": "Configurar boneca de papel",
+                "name": "Configurações globais da boneca de papel"
+            },
+            "hideActorHeaderText": {
+                "hint": "Oculte o texto no botão de cabeçalho do ator.",
+                "name": "Ocultar texto do botão do cabeçalho do ator"
+            },
+            "paperDollPosition": {
+                "choices": {
+                    "center": "Centro",
+                    "left": "Esquerda",
+                    "right": "Certo"
+                },
+                "hint": "Posição do boneco de papel quando aberto. \nObserve que se o espaço não for suficiente à esquerda ou à direita, o boneco de papel será colocado no meio.",
+                "label": "Posição",
+                "name": "Posição da boneca de papel"
+            },
+            "playerOwnedOnly": {
+                "hint": "Habilite Paper Doll apenas para atores pertencentes a jogadores.",
+                "name": "Propriedade exclusiva do jogador"
+            }
+        }
+    }
+}

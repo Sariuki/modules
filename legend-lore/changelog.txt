@@ -1,0 +1,12 @@
+0111a38 Update README.md
+0359c1f Update README.md
+0e8a6e8 #19 fix template compendium from not showing
+e88392e #19 removed old db files
+d6008ef #17 add comma to default JSON Payload template
+194cffe Merge pull request #20 from Daxiongmao87/daxiongmao87/issue/17
+32b337e Merge pull request #21 from Daxiongmao87/daxiongmao87/issue/19
+012571f Merge pull request #22 from Daxiongmao87/v1.0.2
+520d606 Update module.json
+3b44749 Added workflow logic for pushing changes to foundryvtt package catalog
+fd027d8 Merge branch 'main' of github.com:Daxiongmao87/legend-lore-foundry
+ee6604c Update manifest and download links in module.json

@@ -1,0 +1,69 @@
+{
+    "party-monitor-dock": {
+        "app": {
+            "buttons": {
+                "context": {
+                    "epicRoll": "Requerido \nRollo",
+                    "follow": "Seguir",
+                    "mount": "Montar",
+                    "raise-hand": "Levantar la mano"
+                },
+                "enlarge": "Aumentar tamaño",
+                "reduce": "Disminuir tamaño",
+                "start-follow": "Empezar a seguir",
+                "stop-follow": "Dejar de seguir",
+                "toggle-dock": "Alternar muelle",
+                "toggle-nav": "Alternar botones de navegación"
+            }
+        },
+        "notifications": {
+            "dismounted": "ha desmontado",
+            "follow": "ahora siguiendo",
+            "mounted": "ha montado",
+            "unfollow": "ya no sigue"
+        },
+        "settings": {
+            "cornerImage": {
+                "hint": "La imagen que se utilizará en las esquinas del muelle. Déjela en blanco para desactivarla.",
+                "name": "Imagen de esquina"
+            },
+            "dockAlignment": {
+                "choices": {
+                    "center": "Centro",
+                    "flex-end": "Abajo",
+                    "flex-start": "Arriba"
+                },
+                "hint": "La alineación del HUD en la pantalla.",
+                "name": "Alineación del HUD"
+            },
+            "edgeImage": {
+                "hint": "La imagen que se utilizará para llenar el espacio entre las esquinas del muelle. \nDéjelo en blanco para desactivarlo.",
+                "name": "Imagen de borde"
+            },
+            "onlyConnected": {
+                "hint": "Mostrar solo jugadores que estén conectados al servidor",
+                "name": "Mostrar solo jugadores conectados"
+            },
+            "portraitSize": {
+                "hint": "El tamaño de los retratos en el banquillo.",
+                "name": "Tamaño vertical"
+            },
+            "hideInCombat": {
+                "hint": "Ocultar el HUD cuando hay un combate activo",
+                "name": "Esconderse en combate"
+            },
+            "hideCompanions": {
+                "hint": "Ocultar compañeros de la lista de miembros del grupo",
+                "name": "Ocultar compañeros"
+            },
+            "dockSide": {
+                "choices": {
+                    "left": "Izquierda (controles de acoplamiento a escena)",
+                    "right": "Derecha (acoplar a la barra lateral)"
+                },
+                "hint": "El lado de la pantalla para colocar el dock.",
+                "name": "Lado del muelle"
+            }
+        }
+    }
+}

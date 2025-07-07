@@ -1,0 +1,69 @@
+{
+    "party-monitor-dock": {
+        "app": {
+            "buttons": {
+                "context": {
+                    "epicRoll": "Richiesto \nRotolo",
+                    "follow": "Seguire",
+                    "mount": "Montare",
+                    "raise-hand": "Alzare la mano"
+                },
+                "enlarge": "Aumenta dimensione",
+                "reduce": "Diminuisci dimensione",
+                "start-follow": "Inizia a seguire",
+                "stop-follow": "Smetti di seguire",
+                "toggle-dock": "Attiva/disattiva Dock",
+                "toggle-nav": "Attiva/disattiva i pulsanti di navigazione"
+            }
+        },
+        "notifications": {
+            "dismounted": "è smontato",
+            "follow": "ora segue",
+            "mounted": "ha montato",
+            "unfollow": "non segue più"
+        },
+        "settings": {
+            "cornerImage": {
+                "hint": "L'immagine da utilizzare negli angoli del dock Lascia vuoto per disabilitare.",
+                "name": "Immagine d'angolo"
+            },
+            "dockAlignment": {
+                "choices": {
+                    "center": "Centro",
+                    "flex-end": "Metter il fondo a",
+                    "flex-start": "Superiore"
+                },
+                "hint": "L'allineamento dell'HUD sullo schermo",
+                "name": "Allineamento dell'HUD"
+            },
+            "edgeImage": {
+                "hint": "L'immagine da utilizzare per riempire lo spazio tra gli angoli del dock. \nLascia vuoto per disabilitare.",
+                "name": "Immagine del bordo"
+            },
+            "onlyConnected": {
+                "hint": "Mostra solo i giocatori che sono connessi al server",
+                "name": "Mostra solo i giocatori connessi"
+            },
+            "portraitSize": {
+                "hint": "La dimensione dei ritratti nel molo",
+                "name": "Formato verticale"
+            },
+            "hideInCombat": {
+                "hint": "Nascondi l'HUD quando è attivo un combattimento",
+                "name": "Nasconditi in combattimento"
+            },
+            "hideCompanions": {
+                "hint": "Nascondi i compagni dall'elenco dei membri del gruppo",
+                "name": "Nascondi compagni"
+            },
+            "dockSide": {
+                "choices": {
+                    "left": "Sinistra (ancora ai controlli della scena)",
+                    "right": "Destra (ancoraggio alla barra laterale)"
+                },
+                "hint": "Il lato dello schermo in cui posizionare il dock",
+                "name": "Lato del molo"
+            }
+        }
+    }
+}

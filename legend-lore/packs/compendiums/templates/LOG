@@ -1,0 +1,8 @@
+2025/07/05-21:20:55.556 6d4 Recovering log #79
+2025/07/05-21:20:55.833 6d4 Delete type=0 #79
+2025/07/05-21:20:55.833 6d4 Delete type=3 #78
+2025/07/05-23:55:05.993 2088 Level-0 table #83: started
+2025/07/05-23:55:05.993 2088 Level-0 table #83: 0 bytes OK
+2025/07/05-23:55:06.138 2088 Delete type=0 #81
+2025/07/05-23:55:06.139 2088 Manual compaction at level-0 from '!journal!rxYSKXMO6JTDoSau' @ 72057594037927935 : 1 .. '!journal.pages!rxYSKXMO6JTDoSau.yWyBRt0zOKTk4uEP' @ 0 : 0; will stop at (end)
+2025/07/05-23:55:06.140 2088 Manual compaction at level-1 from '!journal!rxYSKXMO6JTDoSau' @ 72057594037927935 : 1 .. '!journal.pages!rxYSKXMO6JTDoSau.yWyBRt0zOKTk4uEP' @ 0 : 0; will stop at (end)

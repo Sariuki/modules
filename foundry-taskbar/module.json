@@ -1,0 +1,44 @@
+{
+  "title": "Taskbar",
+  "description": "A Windows style taskbar for Foundry",
+  "version": "4.1.0",
+  "authors": [
+    {
+      "name": "theripper93",
+      "email": "tsplab@gmail.com",
+      "url": "https://www.patreon.com/theripper93"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    }
+  ],
+  "scripts": [
+    "scripts/main.js",
+    "scripts/config.js",
+    "scripts/taskbar.js",
+    "scripts/sortable.js"
+  ],
+  "styles": [
+    "styles/taskbar.css"
+  ],
+  "id": "foundry-taskbar",
+  "relationships": {
+    "requires": [
+      {
+        "id": "colorsettings",
+        "type": "module",
+        "compatibility": {}
+      }
+    ]
+  },
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
+  "manifest": "https://r2.foundryvtt.com/packages-public/foundry-taskbar/module.json",
+  "protected": true
+}

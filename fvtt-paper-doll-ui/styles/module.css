@@ -1,0 +1,235 @@
+:root {
+  --paper-doll-slot-width: 60px;
+  --paper-doll-flex-gap: 0.3rem;
+  --paper-doll-main-color: #191005;
+  --paper-doll-slot-hue-rotate: 0deg;
+}
+
+.paper-doll header:not(.paper-doll-header-visible),
+#paper-doll-global-config header:not(.paper-doll-header-visible) {
+  display: none;
+}
+.paper-doll .window-content,
+#paper-doll-global-config .window-content {
+  margin: 0;
+  padding: 0;
+}
+.paper-doll .paper-doll-content,
+#paper-doll-global-config .paper-doll-content {
+  position: relative;
+  pointer-events: none;
+}
+.paper-doll .paper-doll-content .paper-doll-background,
+#paper-doll-global-config .paper-doll-content .paper-doll-background {
+  background-color: var(--paper-doll-main-color);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.paper-doll .paper-doll-content .paper-doll-background .paper-doll-portrait,
+#paper-doll-global-config .paper-doll-content .paper-doll-background .paper-doll-portrait {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  object-fit: cover;
+  pointer-events: all;
+}
+.paper-doll .paper-doll-content .paper-doll-background .paper-doll-gradient,
+#paper-doll-global-config .paper-doll-content .paper-doll-background .paper-doll-gradient {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0) 100%);
+  position: absolute;
+}
+.paper-doll .paper-doll-content .paper-doll-background .paper-doll-gradient-2,
+#paper-doll-global-config .paper-doll-content .paper-doll-background .paper-doll-gradient-2 {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4352941176));
+  position: absolute;
+}
+.paper-doll .paper-doll-content .paper-doll-foreground,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-slot,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-slot {
+  pointer-events: all;
+  width: var(--paper-doll-slot-width);
+  aspect-ratio: 1;
+  color: var(--color-text-light-7);
+  text-align: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 3px ridge var(--paper-doll-main-color);
+  box-shadow: inset 0 0 10px var(--paper-doll-main-color);
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-slot.paper-doll-empty,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-slot.paper-doll-empty {
+  filter: sepia(1) brightness(0.6) hue-rotate(var(--paper-doll-slot-hue-rotate));
+  mix-blend-mode: exclusion;
+  opacity: 0.6;
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-slot[data-index=add],
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-slot[data-index=add] {
+  aspect-ratio: 3;
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-slot i,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-slot i {
+  pointer-events: none;
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-top,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-top {
+  display: grid;
+  grid-template-columns: 2fr 5fr 2fr;
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-col,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1rem;
+  gap: var(--paper-doll-flex-gap);
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-left,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-left {
+  align-items: flex-start;
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-right,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-right {
+  align-items: flex-end;
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-center:not(.config),
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-center:not(.config) {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-center:not(.config) .inner,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-center:not(.config) .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.2rem;
+  padding: 0.2rem;
+  background: rgba(0, 0, 0, 0.7215686275);
+  backdrop-filter: blur(5px);
+  border-radius: 0px;
+  border: 3px ridge var(--paper-doll-main-color);
+  flex-wrap: wrap;
+  overflow-y: auto;
+  position: absolute;
+  max-height: 100%;
+  min-width: 100%;
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-center.config,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-center.config {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  pointer-events: all;
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-center form,
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-center ul,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-center form,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-center ul {
+  list-style: none;
+  margin: 0;
+  background-color: var(--color-text-light-3);
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 0 5px inset black;
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-center form li,
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-center ul li,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-center form li,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-center ul li {
+  border: 1px solid rgba(0, 0, 0, 0.1882352941);
+  padding: 0.3rem;
+  border-radius: 5px;
+  margin-bottom: 0.3rem;
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-center .paper-doll-controls,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-center .paper-doll-controls {
+  pointer-events: all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-center .paper-doll-controls:hover i,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-center .paper-doll-controls:hover i {
+  transform: translateY(0);
+  opacity: 1;
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-center .paper-doll-controls i,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-top .paper-doll-center .paper-doll-controls i {
+  background: rgba(0, 0, 0, 0.5294117647);
+  border-radius: 50%;
+  border: 1px solid;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 5px black, inset 0 0 5px #000000;
+  width: 2rem;
+  aspect-ratio: 1;
+  color: var(--color-text-light-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  transform: translateY(-50px);
+  opacity: 0;
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-bottom,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-bottom .paper-doll-slot,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-bottom .paper-doll-slot {
+  width: var(--paper-doll-slot-width);
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-bottom .paper-doll-slot[data-index=add],
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-bottom .paper-doll-slot[data-index=add] {
+  text-orientation: mixed;
+  writing-mode: vertical-lr;
+  width: calc(var(--paper-doll-slot-width) * 0.4);
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-bottom .paper-doll-main,
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-bottom .paper-doll-wrist,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-bottom .paper-doll-main,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-bottom .paper-doll-wrist {
+  display: flex;
+  gap: var(--paper-doll-flex-gap);
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-bottom .paper-doll-bottom-left,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-bottom .paper-doll-bottom-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  gap: calc(var(--paper-doll-flex-gap) * 5);
+}
+.paper-doll .paper-doll-content .paper-doll-foreground .paper-doll-bottom .paper-doll-bottom-right,
+#paper-doll-global-config .paper-doll-content .paper-doll-foreground .paper-doll-bottom .paper-doll-bottom-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  gap: calc(var(--paper-doll-flex-gap) * 5);
+}/*# sourceMappingURL=module.css.map */
