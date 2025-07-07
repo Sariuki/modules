@@ -54,7 +54,7 @@
   ],
   "packs": [],
   "url": "https://www.patreon.com/theripper93",
-  "manifest": "https://github.com/Sariuki/modules/blob/main/compact-scene-navigation/module.json",
+  "manifest": "https://r2.foundryvtt.com/packages-public/compact-scene-navigation/module.json",
   "relationships": {
     "requires": []
   },
@@ -63,5 +63,4 @@
     "verified": "12"
   },
   "protected": false
-
 }
