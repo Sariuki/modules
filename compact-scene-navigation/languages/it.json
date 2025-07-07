@@ -1,0 +1,28 @@
+{
+    "compact-scene-navigation": {
+        "ToggleFavorite": "Attiva / disattiva il preferito",
+        "goToFolder": "Vai alla cartella",
+        "settings": {
+            "autoHide": {
+                "hint": "Sbiadire automaticamente la barra di navigazione quando non in uso.",
+                "name": "Nascondersi auto"
+            },
+            "clickViewScene": {
+                "hint": "Se abilitato, facendo clic su una scena nella barra laterale visualizzerà la scena invece di aprire la configurazione della scena.",
+                "name": "Fai clic per visualizzare la scena"
+            },
+            "dynamicSorting": {
+                "hint": "Se abilitata, la scena attiva sarà sempre la prima e la scena vista sarà sempre seconda.",
+                "name": "Smistamento dinamico"
+            },
+            "gmOnly": {
+                "hint": "Abilita solo per GM, se i giocatori disabili saranno in grado di vedere l'albero delle cartelle per qualsiasi scena che hanno il permesso di visualizzare.",
+                "name": "Solo GM"
+            },
+            "useNavigation": {
+                "hint": "Se lo spettacolo enalbeto mostrano solo scene contrassegnate come \"spettacolo in navigazione\" per il GM, altrimenti mostra tutte le scene. \nI giocatori vedranno sempre le scene contrassegnate solo come \"spettacolo in navigazione\" per i giocatori.",
+                "name": "Mostra solo una scena in navigazione"
+            }
+        }
+    }
+}

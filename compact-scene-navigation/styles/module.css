@@ -1,0 +1,85 @@
+#navigation {
+  --color-border-bg: rgb(50, 50, 50);
+}
+#navigation.auto-hide #scene-list,
+#navigation.auto-hide #nav-toggle {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 2s;
+}
+#navigation.auto-hide:hover #scene-list,
+#navigation.auto-hide:hover #nav-toggle {
+  opacity: 1;
+  transition-delay: 0s;
+  transition-duration: 0.2s;
+}
+#navigation #nav-toggle {
+  margin-right: 0;
+  background: rgba(39, 39, 39, 0.95);
+  border: 1.5px solid transparent;
+  border-bottom: 2px solid black;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 34.5px;
+  transition: all 0.2s ease-in-out;
+}
+#navigation #nav-toggle:hover {
+  border: 1.5px solid var(--color-border-bg);
+  border-bottom: 2px solid black;
+  background-color: var(--color-border-bg);
+}
+#navigation #scene-list .scene.view, #navigation #scene-list .scene.context {
+  box-shadow: none;
+}
+#navigation #scene-list .scene.gm {
+  background: #18141b;
+  border: 1px solid #2d2b30;
+}
+#navigation #scene-list .scene.gm.view, #navigation #scene-list .scene.gm.context {
+  border: 1px solid var(--color-border-highlight-alt);
+}
+#navigation #scene-list .scene a:hover {
+  text-shadow: none;
+}
+#navigation #scene-list .scene:not(.folder):not(:has(#context-menu)) {
+  transition: all 0.2s ease-in-out;
+}
+#navigation #scene-list .scene:not(.folder):not(:has(#context-menu)):hover {
+  filter: brightness(1.2);
+}
+#navigation #scene-list .folder {
+  float: left;
+  background: rgba(39, 39, 39, 0.95);
+  border: 1.5px solid transparent;
+  display: flex;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+  --folder-color: black;
+  border-bottom: 2px solid var(--folder-color);
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+#navigation #scene-list .folder a:hover, #navigation #scene-list .folder span:hover {
+  text-shadow: 0 0 10px var(--color-shadow-highlight);
+}
+#navigation #scene-list .folder a:hover .context-items, #navigation #scene-list .folder span:hover .context-items {
+  text-shadow: none;
+}
+#navigation #scene-list .folder .scene-name {
+  padding: 0 8px;
+  transition: all 0.2s ease-in-out;
+}
+#navigation #scene-list .folder .scene-name:hover {
+  background-color: var(--color-border-bg);
+}
+#navigation #scene-list .folder .siblings {
+  padding: 0 8px;
+  transition: all 0.2s ease-in-out;
+}
+#navigation #scene-list .folder .siblings:hover {
+  background-color: var(--color-border-bg);
+}
+#navigation #scene-list .folder:hover {
+  border: 1.5px solid var(--color-border-bg);
+  border-bottom: 2px solid var(--folder-color);
+}/*# sourceMappingURL=module.css.map */

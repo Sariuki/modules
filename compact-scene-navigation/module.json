@@ -1,0 +1,68 @@
+{
+  "title": "Compact Scene Navigation",
+  "description": "A reworked and more compact scene navigation bar which includes favorites and folders.",
+  "id": "compact-scene-navigation",
+  "version": "1.0.1",
+  "authors": [
+    {
+      "name": "theripper93",
+      "email": "tsplab@gmail.com",
+      "url": "https://www.patreon.com/theripper93"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "languages/en.json"
+    },
+    {
+      "lang": "ja",
+      "name": "日本語",
+      "path": "languages/ja.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "languages/de.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "languages/fr.json"
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "languages/es.json"
+    },
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "languages/pt-br.json"
+    },
+    {
+      "lang": "it",
+      "name": "Italiano",
+      "path": "languages/it.json"
+    }
+  ],
+  "scripts": [],
+  "esmodules": [
+    "index.js"
+  ],
+  "styles": [
+    "styles/module.css"
+  ],
+  "packs": [],
+  "url": "https://www.patreon.com/theripper93",
+  "manifest": "https://r2.foundryvtt.com/packages-public/compact-scene-navigation/module.json",
+  "relationships": {
+    "requires": []
+  },
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
+  "protected": true
+}

@@ -1,0 +1,28 @@
+{
+    "compact-scene-navigation": {
+        "ToggleFavorite": "Bascule favori",
+        "goToFolder": "Aller dans le dossier",
+        "settings": {
+            "autoHide": {
+                "hint": "Avariant automatiquement la barre de navigation lorsqu'il n'est pas utilisé.",
+                "name": "Cachette automatique"
+            },
+            "clickViewScene": {
+                "hint": "Si vous êtes activé, cliquer sur une scène dans la barre latérale affichera la scène au lieu d'ouvrir la configuration de la scène.",
+                "name": "Cliquez pour voir la scène"
+            },
+            "dynamicSorting": {
+                "hint": "Si elle est activée, la scène active sera toujours la première et la scène visualisée sera toujours deuxième.",
+                "name": "Tri dynamique"
+            },
+            "gmOnly": {
+                "hint": "Activer pour GM uniquement, si les joueurs handicapés pourront voir l'arbre de dossier pour toute scène qu'ils ont la permission de voir.",
+                "name": "GM seulement"
+            },
+            "useNavigation": {
+                "hint": "Si Enalbed ne montre que des scènes marquées comme `` Show in Navigation '' pour le GM, affichez autrement toutes les scènes. \nLes joueurs ne verront toujours que des scènes marquées comme «Show in Navigation» pour les joueurs.",
+                "name": "Montre uniquement la scène en navigation"
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+<nav id="navigation" class="app flexrow {{#if collapsed}}collapsed{{/if}}" data-tooltip-direction="CENTER"
+    aria-label="{{localize 'SCENES.NavLabel'}}">
+
+    <a id="nav-toggle" class="nav-item" aria-label="{{localize 'SCENES.ToggleNav'}}" role="button"
+        data-tooltip="SCENES.ToggleNav" alt="{{localize 'SCENES.ToggleNav'}}">
+        <i class="fas fa-caret-{{#if collapsed}}down{{else}}up{{/if}}"></i>
+    </a>
+
+    <ol id="scene-list">
+        {{#each path as |folder|}}
+        <li class="nav-item folder {{folder.css}} {{#if folder.isRoot}}is-root{{/if}}" {{#if
+            folder.tooltip}}data-tooltip="{{folder.tooltip}}" {{/if}} style="--folder-color: {{folder.color}}; {{folder.style}}">
+            {{#if folder.isRoot}}
+            <a class="scene-name favorites" data-folder="root">
+                <i class="fas fa-star"></i>
+            </a>
+            {{/if}}
+            {{#if folder.name}}
+            <a class="scene-name" data-folder="{{#if folder.isRoot}}root{{else}}{{folder.uuid}}{{/if}}">
+                {{{folder.name}}}
+            </a>
+            {{/if}}
+            {{#if folder.children.length}} <span class="siblings" data-uuid="{{folder.uuid}}"><i
+                    class="fa-regular fa-angle-right"></i></span> {{/if}}
+        </li>
+        {{/each}}
+        {{#each scenes}}
+        <li class="scene nav-item {{this.css}}" data-scene-id="{{this.id}}" {{#if
+            this.tooltip}}data-tooltip="{{this.tooltip}}" {{/if}}>
+            <a class="scene-name">
+                {{#if this.active}}<i class="fas fa-bullseye"></i>{{/if}}
+                {{{this.name}}}
+            </a>
+            <ul class="scene-players">
+                {{#each this.users as |user i|}}
+                <li class="scene-player" style="background-color: {{user.color}};">{{user.letter}}</li>
+                {{/each}}
+            </ul>
+        </li>
+        {{/each}}
+    </ol>
+</nav>

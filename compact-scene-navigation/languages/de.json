@@ -1,0 +1,28 @@
+{
+    "compact-scene-navigation": {
+        "ToggleFavorite": "Favoriten umschalten",
+        "goToFolder": "Gehen Sie zum Ordner",
+        "settings": {
+            "autoHide": {
+                "hint": "Verblassen Sie die Navigationsleiste automatisch, wenn Sie nicht verwendet werden.",
+                "name": "Automatisch ausblenden"
+            },
+            "clickViewScene": {
+                "hint": "Wenn das Klicken auf eine Szene in der Seitenleiste aktiviert ist, wird die Szene angezeigt, anstatt die Szenenkonfiguration zu öffnen.",
+                "name": "Klicken Sie hier, um die Szene anzuzeigen"
+            },
+            "dynamicSorting": {
+                "hint": "Wenn es aktiviert ist, ist die aktive Szene immer an erster Stelle und die angesehene Szene wird immer an zweiter Stelle stehen.",
+                "name": "Dynamische Sortierung"
+            },
+            "gmOnly": {
+                "hint": "Aktivieren Sie nur für GM, wenn behinderte Spieler den Ordnerbaum für eine Szene sehen können, die sie zu sehen haben.",
+                "name": "Nur GM"
+            },
+            "useNavigation": {
+                "hint": "Wenn enalbed Show nur Szenen als \"Show in Navigation\" für den GM markiert sind, zeigen Sie ansonsten alle Szenen. \nDie Spieler werden immer nur Szenen sehen, die als \"Show in Navigation\" für Spieler gekennzeichnet sind.",
+                "name": "Nur Szene in der Navigation zeigen"
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "compact-scene-navigation": {
+        "ToggleFavorite": "Alternar o favorito",
+        "goToFolder": "Vá para a pasta",
+        "settings": {
+            "autoHide": {
+                "hint": "Desbote automaticamente a barra de navegação quando não estiver em uso.",
+                "name": "Esconda automática"
+            },
+            "clickViewScene": {
+                "hint": "Se ativado, clicar em uma cena na barra lateral verá a cena em vez de abrir a configuração da cena.",
+                "name": "Clique para ver a cena"
+            },
+            "dynamicSorting": {
+                "hint": "Se ativado, a cena ativa sempre será a primeira e a cena vista sempre será a segunda.",
+                "name": "Classificação dinâmica"
+            },
+            "gmOnly": {
+                "hint": "Habilite apenas para GM, se os jogadores desativados poderão ver a árvore de pastas para qualquer cena que eles tenham permissão para visualizar.",
+                "name": "Apenas GM"
+            },
+            "useNavigation": {
+                "hint": "Se o Enalbed mostrar apenas cenas marcadas como 'show em navegação' para o GM, mostre todas as cenas. \nOs jogadores sempre verão apenas cenas marcadas como 'show na navegação' para os jogadores.",
+                "name": "Mostre apenas cena na navegação"
+            }
+        }
+    }
+}
